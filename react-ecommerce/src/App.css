@@ -6,16 +6,19 @@
   padding-left: 50px !important;
   padding-right: 50px !important;
   height: 75px;
-  width: 100%;
-  /* position: fixed !important;
+  /* width: 100%;
+  position: fixed !important;
   z-index: 1000 !important; */
 }
 .menu-logo{
   font-size: 1.6rem;
 }
 
-.navbar-nav{
-  margin-left: 36.5vw;
+.me-auto{
+  /* margin-left: 36.5vw; */
+  /* text-align: center; */
+  margin-left: auto;
+  padding-left: 180px !important;
 }
 .menu-icons{
   display: flex;
@@ -472,3 +475,46 @@ font-family: var(--typeBasePrimary), var(--typeBaseFallback);
   }
 
 
+/* Login.css */
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa; /* Light background color */
+}
+
+.login-container .row {
+  width: 100%;
+}
+
+.img-fluid {
+  width: 100%; /* Ensure the image is responsive */
+}
+
+.btn-light {
+  background-color: #ffffff; /* Set the background for buttons */
+  border: 1px solid #ced4da; /* Add border */
+  color: #495057; /* Text color */
+}
+
+.btn-light:hover {
+  background-color: #e2e6ea; /* Change color on hover */
+}
+
+h4 {
+  color: #343a40; /* Darker color for title */
+}
+
+.invalid-feedback {
+  font-size: 0.9rem; /* Smaller font for error messages */
+}
+
+.text-center {
+  margin-bottom: 1rem; /* Add spacing between text elements */
+}
+
+input[type="checkbox"] {
+  margin-right: 0.5rem; /* Space for checkbox label */
+}

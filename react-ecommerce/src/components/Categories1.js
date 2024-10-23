@@ -48,9 +48,10 @@ function Categories1() {
         <Row>
           <Col className='d-flex justify-content-between mb-4'>
             {
-              shirt.map((item) => {
+              shirt.map((item,ind) => {
                 return (
                   <>
+                   {ind >=0 && ind<4 &&
                    <Link to={`/product/${item._id}`}>
                     <Card style={{ width: '21rem' }} className='categories'>
                       <Card.Img variant="top" src={getImageUrl(item.product_img[0])} height={500} />
@@ -62,6 +63,7 @@ function Categories1() {
                       </Card.Body>
                     </Card>
                     </Link>
+              }
                   </>
                 )
               })

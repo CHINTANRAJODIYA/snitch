@@ -81,7 +81,7 @@ function Menu({ name, ...props }) {
             <Nav.Link href="#features"><Image src="https://www.snitch.co.in/cdn/shop/files/blackoption.png?v=1659016547" height={60}></Image></Nav.Link>
           </Nav>
            <div className='menu-icons'>
-              <div className='menu-btn'><TfiUser /></div>
+           <Link to='/login'> <div className='menu-btn'><TfiUser /></div></Link>
               <div className='menu-btn'><TfiSearch /></div>
              <Link to='/cart'> <div className='menu-btn'><TfiHeart /></div></Link>
               <div className='menu-btn'><TfiBag /></div>

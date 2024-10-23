@@ -12,6 +12,8 @@ import Card from 'react-bootstrap/Card';
 
 function Cart() {
 
+  const [wish,setWish]= useState('');
+
   const cart = useSelector((state) => state.cart.cart)
 
   const getImageUrl = (imageName) => {
@@ -30,13 +32,30 @@ function Cart() {
     }
   }
 
+  const updateWish = (currentTime) => {
+    const hours = currentTime.getHours();
+    console.log(hours)
+    
+    if (hours >= 0 && hours <= 5) {
+      setWish('Good night');
+    } else if (hours >= 6 && hours <= 11) {
+      setWish('Good Morning');
+    } else if (hours >= 12 && hours <= 16) {
+      setWish('Good Afternoon');
+    } else if (hours >= 17 && hours <= 24) {
+      setWish('Good Evening');
+    }
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setTime(new Date());
     }, 1000);
+    updateWish(time);
 
     return () => clearInterval(interval);
   }, []);
+
 
   const formattedTime = () => {
     const hours = time.getHours();
@@ -44,6 +63,7 @@ function Cart() {
     const seconds = time.getSeconds();
     return `${hours}:${minutes}:${seconds}`;
   };
+
 
   return (
     <>
@@ -78,7 +98,7 @@ function Cart() {
           </Col>
           <Col>
             <Row className='cart-Wish-line'>
-              <Col className='d-flex justify-content-center mt-5'>Good Morning! Chintan</Col>
+              <Col className='d-flex justify-content-center mt-5'>{wish}! Chintan</Col>
             </Row>
             <Row className='mt-4 cart-product-box'>
               {cart.length > 0 ? (

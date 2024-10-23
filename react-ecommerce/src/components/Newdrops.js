@@ -18,8 +18,7 @@ function Newdrops() {
           } 
     }
 
-    useEffect(() => {
-
+    useEffect(() => {   
         fetchData('http://localhost:3001/viewallproduct');
 
     }, []);
